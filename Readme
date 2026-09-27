@@ -6,6 +6,18 @@ It helps MCA students quickly find answers from college and academic documents s
 
 ---
 
+## ⚠️ Current Deployment Limitation
+
+The deployed backend currently does not provide the AI inference runtime required by the application.
+
+The project is configured to use Ollama locally for AI inference. Therefore, the complete chatbot functionality is currently available when running the project locally.
+
+### 🌐 Project Deployment Link Note backend not working due to API free limit reached:https://mca-rag-assistant.vercel.app/
+
+[Open MCA Assistant](YOUR_VERCEL_LINK)
+
+For the complete working RAG pipeline, follow the local setup instructions provided above.
+
 ## 💡 What It Does
 
 This chatbot uses **Retrieval-Augmented Generation (RAG)**, which means it:
