@@ -14,8 +14,6 @@ The project is configured to use Ollama locally for AI inference. Therefore, the
 
 ### 🌐 Project Deployment Link Note backend not working due to API free limit reached:https://mca-rag-assistant.vercel.app/
 
-[Open MCA Assistant](YOUR_VERCEL_LINK)
-
 For the complete working RAG pipeline, follow the local setup instructions provided above.
 
 ## 💡 What It Does
