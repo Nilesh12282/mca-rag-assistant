@@ -1,0 +1,85 @@
+# 🧠 RAG-Based MCA Assistant
+
+The **RAG-Based MCA Assistant** is an AI-powered academic chatbot built using **FastAPI**, **React**, **Pinecone**, and **Ollama (Llama 3.2)**.
+
+It helps MCA students quickly find answers from college and academic documents such as examination information, admission details, eligibility criteria, academic policies, fees, and other MCA-related documents.
+
+---
+
+## 💡 What It Does
+
+This chatbot uses **Retrieval-Augmented Generation (RAG)**, which means it:
+
+1. Reads MCA/college PDF documents.
+2. Splits the extracted content into smaller chunks.
+3. Converts the chunks into embeddings using **Nomic-Embed-Text**.
+4. Stores the embeddings in **Pinecone**.
+5. Retrieves the most relevant information based on the student's question.
+6. Uses **Llama 3.2** to generate a natural-language response.
+7. Runs locally using **Ollama** without requiring an external LLM API.
+
+You can ask questions such as:
+
+* "What is the admission process?"
+* "What are the eligibility criteria?"
+* "What are the examination rules?"
+* "What subjects are included in the MCA curriculum?"
+* "What are the college academic policies?"
+
+---
+
+## 🗂️ Project Structure
+
+The project is divided into two main parts:
+
+* **Backend (FastAPI)** – Handles document processing, embeddings, semantic search, and LLM response generation.
+* **Frontend (React)** – Provides a simple and user-friendly chatbot interface for students.
+
+The backend connects to **Ollama** for embeddings and response generation and **Pinecone** for vector-based semantic search.
+
+---
+
+## ⚙️ Backend Setup
+
+### Step 1 – Create and activate a virtual environment
+
+Inside the `backend` folder, create a Python virtual environment and install the required dependencies.
+
+Activate the environment before running the backend.
+
+---
+
+### Step 2 – Configure Ollama
+
+Install Ollama and pull the required models:
+
+* **Llama 3.2** – Used for answer generation.
+* **Nomic-Embed-Text** – Used for generating text embeddings.
+
+Ollama runs locally on port `11434`.
+
+---
+
+### Step 3 – Setup Pinecone
+
+Create a Pinecone account and configure the vector index.
+
+The project uses:
+
+* **Dimension:** `768`
+* **Metric:** `cosine`
+* **Region:** `us-east-1`
+
+The index name is configured through the `.env` file.
+
+---
+
+### Step 4 – Add Environment Variables
+
+Create a `.env` file inside the backend folder and configure the Pinecone credentials.
+
+Example:
+
+```env
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_INDEX_NAME=hr-policies
